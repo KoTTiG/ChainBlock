@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - master
-      - dev
+      - develop
   pull_request:
     branches:
       - master
-      - dev
+      - develop
   workflow_dispatch:
 
 jobs:
@@ -31,4 +31,4 @@ jobs:
           python -m pip install pytest
       - name: Test with pytest
         run: |
-          python -m pytest test.py
+          python -m pytest tests/test.py
