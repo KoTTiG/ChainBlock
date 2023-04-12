@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  node_one:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20001 False
+
+  node_two:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20002 False
+
+  node_three:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20003 False
