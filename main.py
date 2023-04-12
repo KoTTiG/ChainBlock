@@ -1,16 +1,13 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import argparse
+import serverPart
+import node
+from gevent import monkey
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+monkey.patch_all()
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    pars = argparse.ArgumentParser()
+    pars.add_argument('server_id', nargs='?')
+    args = pars.parse_args().server_id
+    current_node = node.Node(int(args))
+    serverPart.start(int(args), current_node)
