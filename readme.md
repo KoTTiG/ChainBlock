@@ -16,9 +16,9 @@
 
 ## Тестирование
 
-master: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/igalaxy00/A.Block/actions/workflows/python-app.yml)
+master: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
 
-develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=develop)](https://github.com/igalaxy00/A.Block/actions/workflows/python-app.yml)
+develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=develop)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
 
 ## Запуск проекта
 Для запуска проекта требуется произвести следующие действия:
@@ -39,12 +39,13 @@ docker-compose up
 Реализованы следующие виды тестов.
 
 *Модульные тесты:* 
-* Конвертация блок в JSON-формат и обратно
+
 * Генерация genesis блока
 * Генерация данных
 * Получение хэша по атрибутам блока
 * Генерация правильного хэша
 * Генерация цепочки блоков и её валидность
+* Конвертация блок в JSON-формат и обратно
 
 *Интеграционные тесты:*
 * Получение блока/блоков от соседних узлов и обработка полученного блока
