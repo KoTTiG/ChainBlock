@@ -29,3 +29,4 @@ services:
     depends_on:
       - node1
       - node2
+
