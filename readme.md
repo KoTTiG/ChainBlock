@@ -1,4 +1,9 @@
-# Small Blockchain
+## Тестирование
+
+master: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
+
+develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=develop)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
+
 
 ## Описание
 Простой Blockchain на Python с использованием веб-серверов, созданных при помощи фреймворка Flask. 
@@ -14,12 +19,6 @@
 - **node** - класс текущей node, который хранит в себе информацию о цепочке блокчейна на данном сервере и содержит функцию для обработки нового блока. В случае добавления при помощи еще одной функции этот блок будет распечатан. 
 - **server** - класс, за счет которого создается серверная реализация блокчейна с помощью фреймворка Flask
 
-## Тестирование
-
-master: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
-
-develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml/badge.svg?branch=develop)](https://github.com/KoTTiG/ChainBlock/actions/workflows/python-app.yml)
-
 ## Запуск проекта
 Для запуска проекта требуется произвести следующие действия:
 
@@ -30,8 +29,8 @@ develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python
 2) В папке проекта выполнить
 
 ```
-docker-compose build
-docker-compose up   
+docker build -t KoTTiG/blockchain:latest .
+docker-compose up 
 ```
 
 ## Тестирование
