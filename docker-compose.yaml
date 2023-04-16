@@ -1,31 +1,18 @@
-version: "3.8"
+version: "3"
 
 services:
 
-  node1:
-    image: KoTTiG/blockchain
-    container_name: node1
-    network_mode: host
-    command: "1"
-    stdin_open: true
-    tty: true
+  node_one:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20001 False
 
+  node_two:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20002 False
 
-  node2:
-    image: KoTTiG/blockchain
-    container_name: node2
-    network_mode: host
-    command: "2"
-    stdin_open: true
-    tty: true
-
-  node3:
-    image: KoTTiG/blockchain
-    container_name: node3
-    network_mode: host
-    command: "3"
-    stdin_open: true
-    tty: true
-    depends_on:
-      - node1
-      - node2
+  node_three:
+    build: .
+    network_mode: "host"
+    command: python -u main.py 127.0.0.1 20003 False
