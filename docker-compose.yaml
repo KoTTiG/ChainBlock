@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   node1:
-    image: KoTTiG/blockchain
+    image: kottig/blockchain
     container_name: node1
     network_mode: host
     command: "1"
@@ -12,7 +12,7 @@ services:
 
 
   node2:
-    image: KoTTiG/blockchain
+    image: kottig/blockchain
     container_name: node2
     network_mode: host
     command: "2"
@@ -20,7 +20,7 @@ services:
     tty: true
 
   node3:
-    image: KoTTiG/blockchain
+    image: kottig/blockchain
     container_name: node3
     network_mode: host
     command: "3"
