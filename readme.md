@@ -29,7 +29,7 @@ develop: [![Tests](https://github.com/KoTTiG/ChainBlock/actions/workflows/python
 2) В папке проекта выполнить
 
 ```
-docker build -t KoTTiG/blockchain:latest .
+docker build -t kottig/blockchain:latest .
 docker-compose up 
 ```
 
