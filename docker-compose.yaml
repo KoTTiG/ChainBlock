@@ -7,18 +7,22 @@ services:
     container_name: node1
     network_mode: host
     command: "1"
+    tty: true
+
 
   node2:
     image: kottig/blockchain
     container_name: node2
     network_mode: host
     command: "2"
+    tty: true
 
   node3:
     image: kottig/blockchain
     container_name: node3
     network_mode: host
     command: "3"
+    tty: true
     depends_on:
       - node1
       - node2
