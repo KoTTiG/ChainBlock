@@ -4,7 +4,7 @@ import threading
 import grequests
 import json
 import block
-
+import logging
 
 def start(server_id, current_node):
     current_server = Flask(__name__)
@@ -30,6 +30,9 @@ def start(server_id, current_node):
                 if new_block.index > current_node.block_index:
                     grequests.map((grequests.post(u, json=new_block.block_to_json()) for u in servers_urls))
             time.sleep(0.5)
+
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
 
     @current_server.route("/", methods=['POST'])
     def server_handler():
